@@ -1,0 +1,67 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d0814776-2771-4191-bec5-7420b5cd805a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ContactManagementSystem</Name>
+    <RootNamespace>ContactManagementSystem</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ContactManagementSystem.py" />
+    <Compile Include="app.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="check_database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="make_admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin_users.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="database.py" />
+    <Content Include="templates\add_contact.html" />
+    <Content Include="templates\admin_contacts.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="templates\admin_dashboard.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="templates\contacts.html" />
+    <Content Include="templates\dashboard.html" />
+    <Content Include="templates\edit_contact.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="templates\login.html" />
+    <Content Include="templates\register.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
